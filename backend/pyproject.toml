@@ -1,0 +1,30 @@
+[project]
+name = "karaoke-backend"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "yt-dlp",
+    "audio-separator[gpu]>=0.30",
+    "torch>=2.5",
+    "torchaudio",
+    "numpy",
+    "soundfile",
+    "audioread",
+    "stable-ts>=2.17",
+    "faster-whisper>=1.1",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchaudio = { index = "pytorch-cu128" }
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv]
+package = false
+python-preference = "system"

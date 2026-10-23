@@ -1,0 +1,8 @@
+library/
+library.db
+node_modules/
+dist/
+.venv/
+__pycache__/
+*.tsbuildinfo
+*.tmp
